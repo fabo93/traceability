@@ -1,7 +1,8 @@
 package com.mycompany.traceabilityproyect;
-// Generated 15/09/2015 01:03:49 PM by Hibernate Tools 4.3.1
+// Generated 15/09/2015 05:38:39 PM by Hibernate Tools 4.3.1
 
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,53 +12,55 @@ import java.util.Set;
 public class Datasource  implements java.io.Serializable {
 
 
-     private Integer id;
-     private Metadato metadato;
+     private BigDecimal id;
+     private Paso paso;
      private String usuario;
-     private String pass;
+     private String password;
      private String host;
-     private String puerto;
-     private int nombreBd;
-     private int motorBd;
-     private Set pasos = new HashSet(0);
+     private BigDecimal puerto;
+     private String nombreBd;
+     private String motorBd;
+     private Set metadatos = new HashSet(0);
 
     public Datasource() {
     }
 
 	
-    public Datasource(Metadato metadato, String usuario, String pass, String host, String puerto, int nombreBd, int motorBd) {
-        this.metadato = metadato;
+    public Datasource(BigDecimal id, Paso paso, String usuario, String password, String host, BigDecimal puerto, String nombreBd, String motorBd) {
+        this.id = id;
+        this.paso = paso;
         this.usuario = usuario;
-        this.pass = pass;
+        this.password = password;
         this.host = host;
         this.puerto = puerto;
         this.nombreBd = nombreBd;
         this.motorBd = motorBd;
     }
-    public Datasource(Metadato metadato, String usuario, String pass, String host, String puerto, int nombreBd, int motorBd, Set pasos) {
-       this.metadato = metadato;
+    public Datasource(BigDecimal id, Paso paso, String usuario, String password, String host, BigDecimal puerto, String nombreBd, String motorBd, Set metadatos) {
+       this.id = id;
+       this.paso = paso;
        this.usuario = usuario;
-       this.pass = pass;
+       this.password = password;
        this.host = host;
        this.puerto = puerto;
        this.nombreBd = nombreBd;
        this.motorBd = motorBd;
-       this.pasos = pasos;
+       this.metadatos = metadatos;
     }
    
-    public Integer getId() {
+    public BigDecimal getId() {
         return this.id;
     }
     
-    public void setId(Integer id) {
+    public void setId(BigDecimal id) {
         this.id = id;
     }
-    public Metadato getMetadato() {
-        return this.metadato;
+    public Paso getPaso() {
+        return this.paso;
     }
     
-    public void setMetadato(Metadato metadato) {
-        this.metadato = metadato;
+    public void setPaso(Paso paso) {
+        this.paso = paso;
     }
     public String getUsuario() {
         return this.usuario;
@@ -66,12 +69,12 @@ public class Datasource  implements java.io.Serializable {
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
-    public String getPass() {
-        return this.pass;
+    public String getPassword() {
+        return this.password;
     }
     
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
     public String getHost() {
         return this.host;
@@ -80,33 +83,33 @@ public class Datasource  implements java.io.Serializable {
     public void setHost(String host) {
         this.host = host;
     }
-    public String getPuerto() {
+    public BigDecimal getPuerto() {
         return this.puerto;
     }
     
-    public void setPuerto(String puerto) {
+    public void setPuerto(BigDecimal puerto) {
         this.puerto = puerto;
     }
-    public int getNombreBd() {
+    public String getNombreBd() {
         return this.nombreBd;
     }
     
-    public void setNombreBd(int nombreBd) {
+    public void setNombreBd(String nombreBd) {
         this.nombreBd = nombreBd;
     }
-    public int getMotorBd() {
+    public String getMotorBd() {
         return this.motorBd;
     }
     
-    public void setMotorBd(int motorBd) {
+    public void setMotorBd(String motorBd) {
         this.motorBd = motorBd;
     }
-    public Set getPasos() {
-        return this.pasos;
+    public Set getMetadatos() {
+        return this.metadatos;
     }
     
-    public void setPasos(Set pasos) {
-        this.pasos = pasos;
+    public void setMetadatos(Set metadatos) {
+        this.metadatos = metadatos;
     }
 
 

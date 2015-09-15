@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/09/2015 05:38:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.traceabilityproyect.PasoActividad" table="PASO_ACTIVIDAD" schema="P09710_1_2" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="flujo" class="com.mycompany.traceabilityproyect.Flujo" fetch="select">
+            <column name="FLUJO_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="paso" class="com.mycompany.traceabilityproyect.Paso" fetch="select">
+            <column name="PASO_ID" length="5" not-null="true" />
+        </many-to-one>
+        <property name="actividad" type="string">
+            <column name="ACTIVIDAD" length="20" not-null="true" />
+        </property>
+        <property name="secuencia" type="big_decimal">
+            <column name="SECUENCIA" precision="22" scale="0" />
+        </property>
+        <property name="entrada" type="string">
+            <column name="ENTRADA" length="5" not-null="true" />
+        </property>
+        <property name="salida" type="string">
+            <column name="SALIDA" length="5" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -11,12 +11,14 @@
             <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
             <url>file:${project.basedir}/lib</url>
         </repository>
-    </repositories>
+        
+        </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+  
     <dependencies>
         <dependency>
     <groupId>org.hibernate</groupId>
@@ -33,6 +35,22 @@
         <dependency>
             <groupId>unknown.binary</groupId>
             <artifactId>mysql-connector-java-5.1.23-bin</artifactId>
+            <version>SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-annotations</artifactId>
+        <version>3.5.6-Final</version>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate.common</groupId>
+        <artifactId>hibernate-commons-annotations</artifactId>
+        <version>4.0.0.Final</version>
+    </dependency>
+        <dependency>
+            <groupId>unknown.binary</groupId>
+            <artifactId>ojdbc7</artifactId>
             <version>SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
-  <schema-selection match-catalog="wconf"/>
-  <table-filter match-name="metadato"/>
-  <table-filter match-name="paso"/>
-  <table-filter match-name="flujo"/>
-  <table-filter match-name="datasource"/>
+  <schema-selection match-schema="P09710_1_2"/>
+  <table-filter match-name="PASO"/>
+  <table-filter match-name="FLUJO"/>
+  <table-filter match-name="METADATO"/>
+  <table-filter match-name="PASO_ACTIVIDAD"/>
+  <table-filter match-name="DATASOURCE"/>
 </hibernate-reverse-engineering>

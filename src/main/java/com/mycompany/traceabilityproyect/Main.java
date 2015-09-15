@@ -5,14 +5,28 @@
  */
 package com.mycompany.traceabilityproyect;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
 /**
  *
  * @author pregrado
  */
 public class Main {
     
-    public static void Main ( String[] args){
+    public static void main ( String[] args){
         
-        System.out.print("Hola mundo");
+        Paso p=new Paso("45", "prueba", "COM");
+        SessionFactory sf = Util.getSessionFactory();
+        Session s = sf.openSession();
+        s.beginTransaction();
+        s.save(p);
+        s.getTransaction().commit();
+        s.close();
+        
+        System.out.print("Agregado");
+        
     }
 }

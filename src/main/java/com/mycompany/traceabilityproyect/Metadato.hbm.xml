@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/09/2015 05:38:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.traceabilityproyect.Metadato" table="METADATO" schema="P09710_1_2" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="datasource" class="com.mycompany.traceabilityproyect.Datasource" fetch="select">
+            <column name="DATASOURCE_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="tabla" type="string">
+            <column name="TABLA" length="20" not-null="true" />
+        </property>
+        <property name="campo" type="string">
+            <column name="CAMPO" length="20" not-null="true" />
+        </property>
+        <property name="referencia" type="string">
+            <column name="REFERENCIA" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

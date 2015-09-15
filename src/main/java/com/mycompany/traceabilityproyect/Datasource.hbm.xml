@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/09/2015 05:38:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.traceabilityproyect.Datasource" table="DATASOURCE" schema="P09710_1_2" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="paso" class="com.mycompany.traceabilityproyect.Paso" fetch="select">
+            <column name="PASO_ID" length="5" not-null="true" />
+        </many-to-one>
+        <property name="usuario" type="string">
+            <column name="USUARIO" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="20" not-null="true" />
+        </property>
+        <property name="host" type="string">
+            <column name="HOST" length="20" not-null="true" />
+        </property>
+        <property name="puerto" type="big_decimal">
+            <column name="PUERTO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nombreBd" type="string">
+            <column name="NOMBRE_BD" length="15" not-null="true" />
+        </property>
+        <property name="motorBd" type="string">
+            <column name="MOTOR_BD" length="15" not-null="true" />
+        </property>
+        <set name="metadatos" table="METADATO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DATASOURCE_ID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.mycompany.traceabilityproyect.Metadato" />
+        </set>
+    </class>
+</hibernate-mapping>

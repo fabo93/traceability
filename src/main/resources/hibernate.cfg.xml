@@ -2,10 +2,15 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/wconf?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">password</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@172.16.0.103:1522:ESTUD</property>
+    <property name="hibernate.connection.username">P09710_1_2</property>
+    <property name="hibernate.connection.password">t95EZB3w</property>
+    <mapping resource="com/mycompany/traceabilityproyect/Paso.hbm.xml"/>
+    <mapping resource="com/mycompany/traceabilityproyect/Metadato.hbm.xml"/>
+    <mapping resource="com/mycompany/traceabilityproyect/PasoActividad.hbm.xml"/>
+    <mapping resource="com/mycompany/traceabilityproyect/Flujo.hbm.xml"/>
+    <mapping resource="com/mycompany/traceabilityproyect/Datasource.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
